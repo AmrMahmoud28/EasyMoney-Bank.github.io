@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--background1);
+    overflow: overlay;
+}
+
+::-webkit-scrollbar{
+    width: 9px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--scroll1);
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--scroll2);
+}
+
+.navBar {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: var(--background1);
+}
+
+.navBar img {
+    user-select: none;
+    padding-top: 8px;
+    width: 230px;
+}
+
+.navItems a , .navItems i {
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 800;
+    font-style: normal;
+    color: var(--text2);
+    margin-left: 20px;
+}
+
+.navItems a:hover , .navItems i:hover {
+    color: var(--textHover);
+}
+
+.navBar button {
+    padding: 10px 28px;
+    font-size: 17px;
+    border: none;
+    border-radius: 24px;
+    cursor: pointer;
+    font-weight: 600;
+    outline-width: 0;
+    color: #2d314d;
+    background-image: linear-gradient(120deg, #FFB300, #ffd980);
+}
+
+.navBar button:hover {
+    background-image: linear-gradient(360deg, #FFB300, #ffd980);
+}
+
+/* ========================================================================================== */
+
+.headerSection {
+    padding-top: 85px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 90uv;
+}
+
+.headerImage img {
+    user-select: none;
+    width: 650px;
+    height: 700px;
+    padding-top: 20px;
+    margin-right: 20px;
+}
+
+.headerText {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.headerText h1 {
+    font-size: 70px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    color: var(--text1);
+    line-height: 1.1;
+    margin-left: 80px;
+}
+
+.headerText p {
+    margin-left: 80px;
+    color: var(--text2);
+    margin-bottom: 15px;
+    font-weight: 700;
+    font-size: 19px;
+}
+
+.headerText button {
+    margin-left: 80px;
+    padding: 10px 28px;
+    font-size: 17px;
+    border: none;
+    border-radius: 24px;
+    cursor: pointer;
+    font-weight: 600;
+    outline-width: 0;
+    color: #2d314d;
+    background-image: linear-gradient(120deg, #FFB300, #ffd980);
+    transition: .5s;
+}
+
+.headerText button:hover {
+    background-image: linear-gradient(360deg, #FFB300, #ffd980);
+}
+
+.container {
+    background-color: var(--background2);
+    padding-bottom: 5vh;
+}
+
+.whyUs {
+    padding-top: 10vh;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 10vh;
+}
+
+.whyUs h1 {
+    font-size: 45px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    color: var(--text1);
+}
+
+.whyUs p {
+    color: var(--text2);
+    margin-bottom: 15px;
+    font-weight: 700;
+    font-size: 19px;
+}
+
+.featuresSection {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 10vh;
+}
+
+.featureItem img {
+    user-select: none;
+    width: 65px;
+    margin-bottom: 5px;
+}
+
+.featureItem h1 {
+    font-size: 25px;
+    font-weight: 800;
+    margin-bottom: 10px;
+    color: var(--text1);
+}
+
+.featureItem p {
+    color: var(--text2);
+    font-weight: 700;
+    font-size: 16.7px;
+}
+
+.footer {
+    background-color: var(--footer);
+    ;
+    height: 30vh;
+}
+
+.footerContainer {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--footerText);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 2rem;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.menu a {
+    text-decoration: none;
+    color: var(--footerText);
+    margin-bottom: 15px;
+    font-weight: 600;
+    font-size: 17px;
+}
+
+.menu a:hover {
+    color: #FFB300;
+}
+
+.socialContainer {
+    user-select: none;
+    margin-top: 3rem;
+}
+
+.socialContainer img {
+    margin-left: 10px;
+    cursor: pointer;
+    width: 23.5px;
+}
+
+.footerContainer button {
+    margin-top: 3rem;
+    padding: 10px 28px;
+    font-size: 17px;
+    border: none;
+    border-radius: 24px;
+    cursor: pointer;
+    font-weight: 600;
+    outline-width: 0;
+    color: #2d314d;
+    background-image: linear-gradient(120deg, #FFB300, #ffd980);
+}
+
+.footerContainer button:hover {
+    background-image: linear-gradient(360deg, #FFB300, #ffd980);
+}

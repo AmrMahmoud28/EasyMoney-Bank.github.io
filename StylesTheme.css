@@ -1,0 +1,85 @@
+:root {
+    --background1Light: white;
+    --background2Light: #f2f2f2;
+    --text1Light: #2d314d;
+    --text2Light: #677483;
+    --textHoverLight: #2d314d;
+    --footerLight: #2d314d;
+    --footerTextLight: white;
+    --scrollLight1: #555;
+    --scrollLight2: #888;
+    
+    --shadowLight: 0 2rem 3rem rgba(132, 139, 200, 0.18);
+
+    --background1Dark: #202124;
+    --background2Dark: #303134;
+    --text1Dark: white;
+    --text2Dark: #bdc1c6;
+    --textHoverDark: #FFB300;
+    --footerDark: #171717;
+    --footerTextDark: #bdc1c6;
+    --scrollDark1: #888;
+    --scrollDark2: #555;
+
+    --shadowDark: 0 2rem 3rem rgba(0, 0, 0, 0.4);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background1: var(--background1Dark);
+        --background2: var(--background2Dark);
+        --text1: var(--text1Dark);
+        --text2: var(--text2Dark);
+        --textHover: var(--textHoverDark);
+        --footer: var(--footerDark);
+        --footerText: var(--footerTextDark);
+        --scroll1: var(--scrollDark1);
+        --scroll2: var(--scrollDark2);
+
+        --shadow: var(--shadowDark);
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --background1: var(--background1Light);
+        --background2: var(--background2Light);
+        --text1: var(--text1Light);
+        --text2: var(--text2Light);
+        --textHover: var(--textHoverLight);
+        --footer: var(--footerLight);
+        --footerText: var(--footerTextLight);
+        --scroll1: var(--scrollLight1);
+        --scroll2: var(--scrollLight2);
+
+        --shadow: var(--shadowLight);
+    }
+}
+
+[color-scheme="dark"] {
+    --background1: var(--background1Dark);
+    --background2: var(--background2Dark);
+    --text1: var(--text1Dark);
+    --text2: var(--text2Dark);
+    --textHover: var(--textHoverDark);
+    --footer: var(--footerDark);
+    --footerText: var(--footerTextDark);
+    --scroll1: var(--scrollDark1);
+    --scroll2: var(--scrollDark2);
+
+    --shadow: var(--shadowDark);
+}
+
+[color-scheme="light"] {
+    --background1: var(--background1Light);
+    --background2: var(--background2Light);
+    --text1: var(--text1Light);
+    --text2: var(--text2Light);
+    --textHover: var(--textHoverLight);
+    --footer: var(--footerLight);
+    --footerText: var(--footerTextLight);
+    --scroll1: var(--scrollLight1);
+    --scroll2: var(--scrollLight2);
+
+    --shadow: var(--shadowLight);
+}

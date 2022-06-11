@@ -1,0 +1,694 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    appearance: none;
+    border: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--background1);
+    overflow: overlay;
+}
+
+::-webkit-scrollbar{
+    width: 9px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--scroll1);
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--scroll2);
+}
+
+.navBar {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 15px;
+    padding-left: 33px;
+    padding-right: 25px;
+    padding-bottom: 20px;
+    background-color: var(--background1);
+}
+
+.navBar img {
+    user-select: none;
+    padding-top: 8px;
+    width: 230px;
+}
+
+.navItems a , .navItems i {
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 800;
+    font-style: normal;
+    color: var(--text2);
+    margin-left: 20px;
+}
+
+.navItems a:hover , .navItems i:hover {
+    color: var(--textHover);
+}
+
+.profileCircle{
+    user-select: none;
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 50%;
+    border: 2px solid var(--scroll1);
+    color: black;
+    font-size: 1.7rem;
+    font-weight: 700;
+    overflow: hidden;
+    background-image: linear-gradient(120deg, #FFB300, #ffd980);
+}
+
+.profileCircle:hover {
+    background-image: linear-gradient(360deg, #FFB300, #ffd980);
+    border: 2.5px solid var(--scroll2);
+}
+
+.info{
+    padding-top: 0.5rem;
+}
+
+.profile{
+    padding-top: 7.5px;
+    display: flex;
+    gap: 0.9rem;
+    text-align: right;
+}
+
+/* =================================================================== */
+
+.container{
+    padding-top: 80px;
+    font-size: 0.88rem;
+
+    display: grid;
+    width: 96%;
+    margin: 0 auto;
+    gap: 1.8rem;
+    grid-template-columns: 14rem auto 23rem;
+}
+
+.container a{
+    color: var(--text1);
+}
+
+.container h1{
+    font-weight: 800;
+    font-size: 1.8rem;
+    color: var(--text1);
+}
+
+.container h2{
+    font-size: 1.4rem;
+}
+
+.container h3{
+    font-size: 1rem;
+}
+
+.container h4{
+    font-size: 0.8rem;
+}
+
+.container h5{
+    font-size: 0.77rem;
+}
+
+small{
+    font-size: 0.75rem;
+}
+
+.textMuted{
+    color: var(--text2);
+}
+
+.container p , .profile p{
+    color: var(--text2);
+}
+
+.container b , .profile b{
+    color: var(--text1);
+}
+
+/* =================================================================== */
+
+aside{
+    height: 100vh;
+}
+
+aside .sideBar{
+    display: flex;
+    flex-direction: column;
+    height: 86vh;
+    position: fixed;
+    left: 0;
+    width: 254px;
+    padding-left: 30px;
+    /* width: 224px; */
+    top: 5.4rem;
+    background: var(--background1);
+    padding-top: 4px;
+}
+
+aside h3{
+    font-weight: 500;
+}
+
+aside .sideBar a{
+    cursor: pointer;
+    display: flex;
+    color: var(--text2);
+    margin-left: 2rem;
+    gap: 1rem;
+    align-items: center;
+    position: relative;
+    height: 3.7rem;
+    transition: all 300ms ease;
+}
+
+aside .sideBar a span{
+    user-select: none;
+    font-size: 1.6rem;
+    transition: all 300ms ease;
+}
+
+aside .sideBar a:last-child{
+    position: absolute;
+    bottom: 2rem;
+}
+
+aside .sideBar a.active{
+    background: var(--background2);
+    color: var(--textHover);
+    margin-left: 0;
+}
+
+aside .sideBar a.active:before{
+    content: "";
+    width: 6px;
+    height: 100%;
+    background: #FFB300;
+}
+
+aside .sideBar a.active span{
+    color: var(--textHover);
+    margin-left: calc(1rem - 3px);
+}
+
+aside .sideBar a:hover{
+    color: var(--textHover);
+}
+
+aside .sideBar a:hover span{
+    margin-left: 1rem;
+}
+
+/* =================================================================== */
+
+#dashboard, #dashboard1{
+    padding-top: 6px;
+}
+
+main .insights{
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.6rem;
+}
+
+main .insights > div{
+    background: var(--background2);
+    padding: 1.8rem;
+    border-radius: 2rem;
+    margin-top: 1rem;
+    box-shadow: var(--shadow);
+    transition: all 300ms ease;
+}
+
+main .insights > div:hover{
+    box-shadow: none;
+}
+
+main .insights > div span{
+    user-select: none;
+    background: #FFB300;
+    padding: 0.5rem;
+    border-radius: 50%;
+    color: black;
+    font-size: 2rem;
+}
+
+main .insights > div.income span{
+    background: #41f1b6;
+}
+
+main .insights > div.expenses span{
+    background: #ff7782;
+}
+
+main .insights > div .middle{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main .insights h3{
+    margin: 1rem 0 0.6rem;
+    font-size: 1rem;
+    color: var(--text2);
+}
+
+/* =================================================================== */
+
+.recentTransaction{
+    margin-top: 2rem;
+}
+
+.recentTransaction h2{
+    margin-bottom: 0.8rem;
+    color: var(--text1);
+}
+
+.recentTransaction table{
+    font-weight: 500;
+    background: var(--background2);
+    color: var(--text1);
+    width: 100%;
+    padding: 1.8rem;
+    border-radius: 2rem;
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: all 300ms ease;
+}
+
+.recentTransaction table:hover{
+    box-shadow: none;
+}
+
+table tbody td{
+    height: 2.8rem;
+    color: var(--text2);
+    border-bottom: 1px solid var(--scroll1);
+}
+
+table tbody tr:hover{
+    background: var(--background1);
+    transition: all 300ms ease;
+}
+
+table tbody tr:last-child td{
+    border: none;
+}
+
+.recentTransaction a{
+    text-align: center;
+    display: block;
+    margin: 1rem auto;
+    color: var(--textHover);
+    cursor: pointer;
+}
+
+/* =================================================================== */
+
+.right{
+    margin-top: 1.4rem;
+}
+
+.right h2{
+    color: var(--text1);
+    margin-bottom: 0.8rem;
+}
+
+.card{
+    user-select: none;
+    background: linear-gradient(120deg, #ffd980, #FFB300);
+    padding: 1.6rem;
+    border-radius: 1.6rem;
+    color: #2d314d;
+    height: 13rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: var(--shadow);
+    transition: all 300ms ease;
+}
+
+.card:hover{
+    box-shadow: none;
+}
+
+.card .top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card .top .left{
+    margin: -15px -5px 0px;
+    display: flex;
+    gap: 0.5rem;
+    width: 190px;
+    padding: 0.4rem;
+}
+
+.card .top .right{
+    margin: -15px 0px 0px;
+    width: 3.5rem;
+}
+
+.card .middle{
+    display: flex;
+    justify-content: space-between;
+}
+
+.card .middle .chip{
+    width: 3.3rem;
+    height: 2.5rem;
+    margin: 11px 0px 0px;
+}
+
+.card .middle h2{
+    padding-top: 16px;
+    color: #2d314d;
+}
+
+.card .bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.card .bottom .rightInfo{
+    display: flex;
+    gap: 2rem;
+}
+
+.card .bottom h4{
+    font-size: 14px;
+}
+
+/* =================================================================== */
+
+.personalInfo{
+    margin-top: 2rem;
+}
+
+.personalInfo h2{
+    margin-bottom: 0.8rem;
+}
+
+.right .personalInfo .info{
+    background: var(--background2);
+    padding: 1.8rem;
+    border-radius: 2rem;
+    box-shadow: var(--shadow);
+    transition: all 300ms ease;
+}
+
+.right .personalInfo .info:hover{
+    box-shadow: none;
+}
+
+.right .personalInfo .info .row{
+    display: grid;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.right .personalInfo .info .row a{
+    display: flex;
+    gap: 0.8rem;
+    border-bottom: 1px solid var(--scroll1);
+    height: 2.8rem;
+    align-items: center;
+    position: relative;
+}
+
+.right .personalInfo .info .row p{
+    font-size: 16px;
+}
+
+.right .personalInfo .info .row span{
+    user-select: none;
+}
+
+.right .personalInfo .info .row p, .right .personalInfo .info .row span{
+    padding-bottom: 1.2rem;
+}
+
+.right .personalInfo .row:last-child a{
+    border: none;
+}
+
+/* =================================================================== */
+
+#history{
+    padding-top: 6px;
+    display: none;
+}
+
+#history .recentTransaction{
+    width: 1150px;
+}
+
+#history table tbody td{
+    font-size: 1rem;
+}
+
+#history table thead th{
+    font-size: 1.1rem;
+}
+
+/* =================================================================== */
+
+#deposit{
+    padding-top: 6px;
+    display: none;
+}
+
+#deposit .insights, #withdraw .insights{
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 71%);
+    gap: 1.6rem;
+}
+
+#deposit .insights > div, #withdraw  .insights > div{
+    background: var(--background2);
+    padding: 1.8rem;
+    border-radius: 2rem;
+    margin-top: 1rem;
+    box-shadow: var(--shadow);
+    transition: all 300ms ease;
+}
+
+#deposit .insights > div:hover, #withdraw .insights > div:hover{
+    box-shadow: none;
+}
+
+#deposit .insights > div span, #withdraw .insights > div span{
+    user-select: none;
+    background: #FFB300;
+    padding: 0.5rem;
+    border-radius: 50%;
+    color: black;
+    font-size: 2rem;
+}
+
+#deposit .insights > div.income span{
+    background: #41f1b6;
+}
+
+#withdraw .insights > div.expenses span{
+    background: #ff7782;
+}
+
+#deposit .insights > div .middle, #withdraw .insights > div .middle{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#deposit .insights h3, #withdraw .insights h3{
+    margin: 1rem 0 0.6rem;
+    font-size: 1.5rem;
+    color: var(--text2);
+}
+
+#deposit .insights h1, #withdraw .insights h1{
+    font-size: 2rem;
+}
+
+/* =================================================================== */
+
+.box{
+    margin-top: 4.5rem;
+    align-items: center;
+    position: absolute;
+    width: 1000px;
+    height: 300px;
+    left: 25%;
+    display: flex;
+    background: var(--background2);
+    justify-content: space-around;
+    padding: 1.8rem;
+    border-radius: 2rem;
+    box-shadow: var(--shadow);
+    transition: all 300ms ease;
+}
+
+#deposit .box:hover{
+    box-shadow: none
+}
+
+.box .left{
+    padding-top: 1rem;
+}
+
+.box .top, .box .bottom{
+    display: grid;
+    grid-template-columns: repeat(4, 35%);
+    padding-bottom: 1.6rem;
+}
+
+.box .left button{
+    cursor: pointer;
+    user-select: none;
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 50%;
+    box-shadow: var(--shadow);
+    color: black;
+    font-size: 1.7rem;
+    font-weight: 700;
+    overflow: hidden;
+    background-image: linear-gradient(120deg, #FFB300, #ffd980);
+    transition: all 300ms ease;
+}
+
+.box .left button:hover{
+    background-image: linear-gradient(360deg, #FFB300, #ffd980);
+    box-shadow: none;
+}
+
+/* =================================================================== */
+
+.box .inputField{
+    max-width: 380px;
+    width: 100%;
+    height: 55px;
+    background-color: var(--background1);
+    border: 2px solid var(--scroll1);
+    margin: 10px 0;
+    border-radius: 55px;
+    display: grid;
+    grid-template-columns: 7% 93%;
+    padding: 0.4rem;
+}
+
+.box .inputField input:-webkit-autofill,
+.box .inputField input:-webkit-autofill:hover, 
+.box .inputField input:-webkit-autofill:focus, 
+.box .inputField input:-webkit-autofill:active{
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: var(--text1) !important;
+}
+
+.box input::-webkit-outer-spin-button,
+.box input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.box .right{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.box .right h2{
+    font-size: 1.9rem;
+    color: var(--text1);
+    margin-bottom: 10px;
+}
+
+.inputField i{
+    text-align: center;
+    line-height: 55px;
+    color: var(--text1);
+    font-size: 1.1rem;
+}
+
+.inputField input{
+    background: none;
+    outline: none;
+    border: none;
+    line-height: 1;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: var(--text1);
+}
+
+.inputField input::placeholder{
+    font-weight: 500;
+}
+
+.depositSubmit, .withdrawSubmit{
+    width: 120px;
+    height: 50px;
+    border: none;
+    outline: none;
+    border-radius: 49px;
+    cursor: pointer;
+    background-image: linear-gradient(120deg, #FFB300, #ffd980);
+    border: 3px solid var(--scroll2);
+    box-shadow: var(--shadow);
+    color: black;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 10px 0;
+    transition: .5s;
+}
+
+.withdrawSubmit{
+    width: 135px;
+    height: 55px;
+}
+
+.depositSubmit:hover, .withdrawSubmit:hover {
+    background-image: linear-gradient(360deg, #FFB300, #ffd980);
+    border: 3px solid var(--scroll1);
+    box-shadow: none;
+}
+
+
+/* =================================================================== */
+
+#withdraw{
+    padding-top: 6px;
+    display: none;
+}
